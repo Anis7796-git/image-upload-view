@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <section class="main">
+
+        <div class="uploader">
+
+            <div class="upload-container">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+
+                    <input type="text" id="imagetitle" placeholder="Enter image title " name="imagetitle">
+
+
+                    <textarea type="text" id="image_description" name="image_description" maxlength="500">
+                </textarea>
+
+
+                    <input type="file" name="image" id="choosefile" />
+
+
+                    <button id="btn" type="submit">
+                        upload Impage
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="viewer">
+
+            <% if(images && images.length>0){%>
+
+                <% images.forEach(function(img){%>
+                    <div class="imagecard">
+                        <img src="data:<%= img.imageType %>;base64,<%= img.base64 %>" alt="<%= img.title %>">
+                        <button class="view-more-btn">view more</button>
+                    </div>
+                    <%}) %>
+                        <%} else {%>
+
+                            <%}%>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

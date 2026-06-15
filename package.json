@@ -1,0 +1,25 @@
+{
+  "name": "image-upload-view",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/register": "^7.29.7",
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "mongodb": "^7.3.0",
+    "morgan": "^1.11.0"
+  }
+}
